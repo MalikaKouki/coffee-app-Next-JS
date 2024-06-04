@@ -30,13 +30,14 @@ export default function Home() {
     })) as ProductsTypes[];
     setDataProducts(productsData);
   };
+  console.log(dataProducts);
 
   return (
    <>
-    {/* <ToastContainer /> */}
+     <ToastContainer /> 
     <Header />
-    {/* <Galerie dataProducts={dataProducts}    />
-    <Footer /> */ }
+    <Galerie dataProducts={dataProducts}    />
+    {/* <Footer />  */}
    </>
   );
 }
