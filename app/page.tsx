@@ -5,12 +5,12 @@ import Header from "./Components/Header";
 
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../app/db/firebaseConfig'; 
-import {ProductsTypes} from "./types/productsType";
+import { db } from '../app/db/firebaseConfig';
+import { ProductsTypes } from "./types/productsType";
 import Galerie from "./Components/Galerie";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//import Footer from "./Components/Footer";
+import Footer from "./Components/footer";
 
 
 export default function Home() {
@@ -33,11 +33,11 @@ export default function Home() {
   console.log(dataProducts);
 
   return (
-   <>
-     <ToastContainer /> 
-    <Header />
-    <Galerie dataProducts={dataProducts}    />
-    {/* <Footer />  */}
-   </>
+    <>
+      <ToastContainer />
+      <Header />
+      <Galerie dataProducts={dataProducts} />
+      <Footer />
+    </>
   );
 }
